@@ -90,3 +90,14 @@ const add = document.getElementById('add')
 add.addEventListener('click', ()=>{
   form.style.scale = '1'
 })
+function importData() {
+      try {
+        const raw = document.getElementById("input").value;
+        const parsed = JSON.parse(raw);
+        localStorage.setItem("airdropData", JSON.stringify(parsed));
+        alert("Berhasil dimasukkan ke localStorage!");
+      } catch (e) {
+        alert("JSON salah atau rusak.");
+      }
+    }
+importData()
