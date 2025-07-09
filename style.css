@@ -127,8 +127,10 @@ form {
   z-index: 5;
   backdrop-filter: blur(10px);
   top: 10%;
-  left: 35%;
+  /* left: 35%; */
+  margin: 0 auto;
   padding: 50px;
+  width: 250px;
   transition: 0.2s;
 }
 form a{
