@@ -2,7 +2,7 @@ const form = document.getElementById("airdropForm");
 const list = document.getElementById("airdropList");
 const filterStatus = document.getElementById("filterStatus");
 
-let garapan = JSON.parse(localStorage.getItem("airdropData")) || [];
+let garapan = JSON.parse(localStorage.getItem("airdropData")) || [{"title":"R2 Money","link":"https://www.r2.money/swap","type":"Testnet","task":"Swap, Stake,  Add Liquidity","status":"Ongoing"},{"title":"Union","link":"https://dashboard.union.build/","type":"Testnet","task":"Bridge to Other Chain","status":"Ongoing"},{"title":"Gokite","link":"https://testnet.gokite.ai/","type":"Testnet","task":"Interaction with AI, Stake, Unstake, Quiz ","status":"Ongoing"},{"title":"Maitrix AI","link":"https://app.testnet.themaitrix.ai/#/home","type":"Testnet","task":"Mint and Stake","status":"Ongoing"},{"title":"Turnkey","link":"https://wallet.tx.xyz/dashboard","type":"Testnet","task":"Send to other adress","status":"Ongoing"},{"title":"Fraction AI","link":"https://fractionai.xyz/dapp","type":"Testnet","task":"Interact with AI","status":"Selesai"},{"title":"Soul","link":"https://app.soul.io/seeds/quests","type":"Testnet","task":"Supply, Lend, Borrow","status":"Ongoing"},{"title":"Somnia Network","link":"https://testnet.somnia.network/","type":"Testnet","task":"Complete quest","status":"Ongoing"},{"title":"Magma","link":"https://www.magmastaking.xyz/","type":"Testnet","task":"Stake, Unstake","status":"Ongoing"},{"title":"Apriori","link":"https://stake.apr.io/","type":"Testnet","task":"Stake and Unstake","status":"Ongoing"},{"title":"Portal to Bitcoin","link":"https://quests.portaltobitcoin.com/quests","type":"Testnet","task":"Complete Quest","status":"Ongoing"},{"title":"Portal to Bitcoin","link":"https://hub.portaltobitcoin.com/dashboard","type":"Testnet","task":"Cek Badge","status":"Ongoing"},{"title":"Revive","link":"https://dev.revivefi.io/lend","type":"Testnet","task":"Lend Borrow","status":"Selesai"}];
 let editIndex = -1;
 
 form.addEventListener("submit", (e) => {
@@ -90,14 +90,4 @@ const add = document.getElementById('add')
 add.addEventListener('click', ()=>{
   form.style.scale = '1'
 })
-function importData() {
-      try {
-        const raw = document.getElementById("input").value;
-        const parsed = JSON.parse(raw);
-        localStorage.setItem("airdropData", JSON.stringify(parsed));
-        alert("Berhasil dimasukkan ke localStorage!");
-      } catch (e) {
-        alert("JSON salah atau rusak.");
-      }
-    }
-importData()
+
