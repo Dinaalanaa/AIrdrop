@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIRDROP DAY</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 List Airdrop</h1>
+    <h3>Never give up don't skip task if you want to success, Remember you have a big dream !!!</h3>
+
+    <form id="airdropForm">
+      <h1>Tambah List Airdrop</h1>
+      <input type="text" id="title" placeholder="Nama Airdrop" required />
+      <input type="url" id="link" placeholder="Link Airdrop" required />
+      <input type="text" id="task" placeholder="Tugas Airdrop" required />
+      <select id="type">
+        <option value="Testnet">Testnet</option>
+        <option value="Web">Web</option>
+        <option value="Bot">Bot</option>
+      </select>
+      <select id="status">
+        <option value="Ongoing">Ongoing</option>
+        <option value="Selesai">Selesai</option>
+      </select>
+      <button type="submit">Tambah</button>
+      <a id="close">x</a>
+    </form>
+
+    <div id="filter">
+      <label for="filterStatus">Filter:</label>
+      <select id="filterStatus">
+        <option value="All">Semua</option>
+        <option value="Ongoing">Ongoing</option>
+        <option value="Selesai">Selesai</option>
+      </select>
+    </div>
+
+    <ul id="airdropList"></ul>
+    <a id="add">+</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
